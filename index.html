@@ -26,8 +26,8 @@
                 <button class="erase-btn">reset</button>
             </div>
             <div class="size">
-                <input type="range" id="range" value="16" min="1" max="100" oninput="output.value = this.value">
-                <output type="number" id="output" class="output">16</output>
+                <input type="range" id="range" class="sizebar" value="16" min="1" max="100" oninput="output.value = `${this.value} x ${this.value}`">
+                <output type="number" id="output" class="output">16 x 16</output>
             </div>
         </div>
         <!-- a decorative pencil -->
