@@ -168,13 +168,16 @@ body {
     height: 768px;
     background-color: #E2E2E2;
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
 }
 
 .square {
-    width: 48px;
-    height: 48px;
-    border: 1px solid #6a6a6a;
-    flex-grow: 1;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #6a6a6a40;
 }
