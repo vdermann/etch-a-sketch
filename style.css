@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;1,200&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E2E2E2;
+}
+
+.etch-a-sketch {
+    margin: 0 auto;
+    width: 1300px;
+    height: 880px;
+    background-color: #472F4F;
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.pocket {
+    background-color: #331F3A;
+    width: 50px;
+    height: 768px;
+    border-radius: 12px;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.color input {
+    background-color: transparent;
+    border: none;
+    border-radius: 100px;
+    padding: 0;
+    width: 300px;
+    height: 70px;
+    cursor: pointer;
+
+    &::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+        border: 3px solid #331F3A;
+        border-radius: 100px;
+    }
+    
+    &::-moz-color-swatch {
+        border: 3px solid #331F3A;
+        border-radius: 100px;
+    }
+
+}
+
+.label {
+    width: 300px;
+    height: 50px;
+    color: #E2E2E2;
+    font-size: 42px;
+    text-align: center;
+}
+
+.brand {
+    background-color: #331F3A;
+    border-radius: 12px;
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.mode-btn {
+    width: 300px;
+    height: 70px;
+    cursor: pointer;
+    border: 3px solid #331F3A;
+    border-radius: 12px;
+    background-color: #5B4065;
+    color: #E2E2E2;
+    font-size: 36px;
+}
+
+.erase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.erase-btn {
+    width: 145px;
+    height: 70px;
+    cursor: pointer;
+    border: 3px solid #331F3A;
+    border-radius: 12px;
+    background-color: #5B4065;
+    color: #E2E2E2;
+    font-size: 36px;
+}
+
+.container {
+    width: 768px;
+    height: 768px;
+    background-color: #E2E2E2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+.square {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #6a6a6a;
+    flex-grow: 1;
+}
