@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,17 +17,17 @@
             </div>
             <div class="modes">
                 <p class="label">mode:</p>
-                <button class="mode-btn">color</button>
-                <button class="mode-btn">rainbow</button>
-                <button class="mode-btn">gray</button>
+                <button class="mode-btn color-btn">color</button>
+                <button class="mode-btn rainbow-btn">rainbow</button>
+                <button class="mode-btn gray-btn">gray</button>
             </div>
             <div class="erase">
-                <button class="erase-btn">eraser</button>
-                <button class="erase-btn">reset</button>
+                <button class="erase-btn eraser-btn">eraser</button>
+                <button class="erase-btn reset-btn">reset</button>
             </div>
             <div class="size">
-                <input type="range" id="range" class="sizebar" value="16" min="1" max="100" oninput="output.value = `${this.value} x ${this.value}`">
-                <output type="number" id="output" class="output">16 x 16</output>
+                <input type="range" id="range" class="sizebar" value="32" min="1" max="100" oninput="output.value = `${this.value} x ${this.value}`">
+                <output type="number" id="output" class="output">32 x 32</output>
             </div>
         </div>
         <!-- a decorative pencil -->

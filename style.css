@@ -141,12 +141,13 @@ body {
     height: 12px;
     border: 3px solid #331F3A;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .sizebar::-webkit-slider-thumb {
     -webkit-appearance: none; /* clear browser thumb */
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background-color: #331F3A ;
     border-radius: 50%;
 }
@@ -179,5 +180,5 @@ body {
 .square {
     flex: 1;
     aspect-ratio: 1 / 1;
-    border: 1px solid #6a6a6a40;
+    border: 1px solid #aaaaaa50;
 }
