@@ -200,9 +200,18 @@ body {
 }
 
 .tip {
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 18px solid #1e1e1e;
+    width: 24px;
+    height: 24px;
+    background-color: #1e1e1e;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%); 
+}
+
+.rainbowTip {
+    background: linear-gradient(90deg, 
+        #d90000 0%, 
+        #ffff00 40%, 
+        #00ff08 50%, 
+        #00c8ff 65%, 
+        #7300ff 90%
+    );
 }

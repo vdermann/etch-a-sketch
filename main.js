@@ -40,12 +40,30 @@ function changeMode(mode) {
         grayMode.classList.remove("active");
         eraserMode.classList.add("active");
     }
+    changeTipColor();
+}
+
+function changeTipColor() {
+    if (currentMode == "color") {
+        tip.classList.remove("rainbowTip");
+        tip.style.backgroundColor = currentColor;
+        inputColor.addEventListener("input", (e) => tip.style.backgroundColor = e.target.value);
+    } else if (currentMode == "rainbow"){
+        tip.classList.add("rainbowTip");
+    } else if (currentMode == "gray") {
+        tip.classList.remove("rainbowTip");
+        tip.style.backgroundColor = "rgba(75, 75, 75, 0.6)";
+    } else {
+        tip.classList.remove("rainbowTip");
+        tip.style.backgroundColor = "#e2e2e2";
+    }
 }
 
 
 // Variables.
 const inputSize = document.querySelector("#range");
 const inputColor = document.querySelector("#colorPicker");
+const tip = document.querySelector(".tip");
 
 const colorMode = document.querySelector(".color-btn");
 const rainbowMode = document.querySelector(".rainbow-btn");
