@@ -7,7 +7,6 @@ let currentColor = DEFAULT_COLOR;
 let currentMode = "";
 
 
-
 function changeSize(size) {
     containerOfDivs.textContent = "";
     currentSize = size;
@@ -91,16 +90,23 @@ function draw(e) {
     } else if (currentMode == "rainbow") {
         e.target.style.backgroundColor = getRandomColor();
     } else if (currentMode == "gray") {
-        e.target.style.backgroundColor = darkenGray(e);
+        darkenGray(e.target);
+    } else {
+        e.target.style.backgroundColor = "#e2e2e2";
     }
 }
 
-// let i = 0;
-// function darkenGray(e) {
-//     e.target.style.backgroundColor = `rgb(0, 0, 0, ${i}%)`;
-//     i += 10;
-//     return;
-// }
+function darkenGray(target) {
+    // Finds its opacity value or initializes it to 0.
+    let currentOpacity = parseFloat(target.dataset.opacity) || 0;
+
+    // Increment by 10% (0.1 in scale of 0 to 1).
+    if (currentOpacity < 1) {
+        currentOpacity += 0.1;
+        target.dataset.opacity = currentOpacity; // Updates the attribute.
+        target.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity})`;
+    }
+}
 
 function getRandomColor() {
     let getRed = Math.floor(Math.random() * 255);
@@ -113,11 +119,3 @@ function getRandomColor() {
 window.addEventListener("load", () => {
     createBoard();
 })
-
-
-
-
-
-
-
-
