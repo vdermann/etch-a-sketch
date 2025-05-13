@@ -52,7 +52,7 @@ const rainbowMode = document.querySelector(".rainbow-btn");
 const grayMode = document.querySelector(".gray-btn");
 const eraserMode = document.querySelector(".eraser-btn");
 
-const reset = document.querySelector(".reset");
+const reset = document.querySelector(".reset-btn");
 
 
 // Listeners.
@@ -64,7 +64,6 @@ rainbowMode.addEventListener("click", () => changeMode("rainbow"));
 grayMode.addEventListener("click", () => changeMode("gray"));
 eraserMode.addEventListener("click", () => changeMode("eraser"));
 
-// reset.addEventListener("click", reset());
 
 
 // Creates the grid.
@@ -79,10 +78,24 @@ function createBoard() {
             let square = document.createElement("div");
             square.classList.add("square");
             row.appendChild(square);
-            square.addEventListener("mouseover", draw);
         }
     }
 }
+
+// Added a listener to the container to paint its square children.
+containerOfDivs.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("square")) {
+        draw(e);
+    }
+});
+
+// Clears the board.
+reset.addEventListener("click", () => {
+    document.querySelectorAll(".square").forEach(square => {
+        square.style.backgroundColor = "#e2e2e2";
+    });
+});
+
 
 function draw(e) {
     if (currentMode == "color") {
@@ -114,7 +127,6 @@ function getRandomColor() {
     let getBlue = Math.floor(Math.random() * 255);
     return `rgb(${getRed}, ${getGreen}, ${getBlue})`;
 }
-
 
 window.addEventListener("load", () => {
     createBoard();
