@@ -182,3 +182,7 @@ body {
     aspect-ratio: 1 / 1;
     border: 1px solid #aaaaaa50;
 }
+
+.active {
+    background-color: #331F3A;
+}
