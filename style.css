@@ -41,6 +41,11 @@ body {
     width: 50px;
     height: 768px;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
 }
 
 .color {
@@ -185,4 +190,19 @@ body {
 
 .active {
     background-color: #331F3A;
+}
+
+.body {
+    width: 30px;
+    height: 700px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+}
+
+.tip {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 18px solid #1e1e1e;
 }
